@@ -1,0 +1,14 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Weather {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.Weather h1 {
+  color: #06255e;
+  font-size: 38px;
+  line-height: 1.5;
+  font-weight: 700;
+}
