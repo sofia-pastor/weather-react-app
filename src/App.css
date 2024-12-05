@@ -1,14 +1,65 @@
 .App {
   font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.App footer {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 16px 0;
+}
+
+.App footer a {
+  color: rgb(45, 160, 180);
 }
 
 .Weather {
   border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.Weather form {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .Weather h1 {
-  color: #06255e;
+  color: rgb(19, 49, 105);
   font-size: 38px;
   line-height: 1.5;
   font-weight: 700;
+}
+
+.Weather ul {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.Weather li {
+  color: rgba(19, 49, 105, 0.7);
+  font-size: 16px;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.Weather .flex-container {
+  display: flex;
+}
+
+.Weather .weather-icon {
+  margin-top: 13px;
+}
+
+.Weather .temperature {
+  font-size: 62px;
+  font-weight: bold;
+  color: rgb(19, 49, 105);
+}
+
+.Weather .unit {
+  margin-top: 18px;
+  font-size: 20px;
+  color: rgba(19, 49, 105, 0.6);
 }

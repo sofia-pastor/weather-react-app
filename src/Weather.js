@@ -7,6 +7,7 @@ export default function Weather() {
             <input
               type="search"
               placeholder="Enter a city.."
+              autoFocus={true}
               className="form-control"
             />
           </div>
@@ -25,12 +26,15 @@ export default function Weather() {
         <li>Clear Sky</li>
       </ul>
       <div className="row">
-        <div className="col-md-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="weather-icon"
-          ></img>
-          18°C
+        <div className="col-md-6 flex-container">
+          <div className="weather-icon">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="weather-icon"
+            ></img>
+          </div>
+          <div className="temperature">18</div>
+          <div className="unit">°C</div>
         </div>
         <div className="col-md-6">
           <ul>
