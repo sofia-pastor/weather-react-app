@@ -1,15 +1,15 @@
 import axios from "axios";
 import { useState } from "react";
+import WeatherUI from "./WeatherUI";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function displayWeather(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Saturday, 23:27",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -40,26 +40,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h1>Porto</h1>
-        <ul>
-          <li>{weatherData.date}</li>
-          <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
-        <div className="row">
-          <div className="col-md-6 flex-container">
-            <div className="weather-icon">
-              <img src={weatherData.iconUrl} alt="weather-icon"></img>
-            </div>
-            <div className="temperature">{weatherData.temperature}</div>
-            <div className="unit">°C</div>
-          </div>
-          <div className="col-md-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/h</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherUI data={weatherData} />
       </div>
     );
   } else {

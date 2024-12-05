@@ -25,41 +25,41 @@
   margin-bottom: 20px;
 }
 
-.Weather h1 {
+.WeatherUI h1 {
   color: rgb(19, 49, 105);
   font-size: 38px;
   line-height: 1.5;
   font-weight: 700;
 }
 
-.Weather ul {
+.WeatherUI ul {
   margin: 0 0 10px 0;
   padding: 0;
 }
 
-.Weather li {
+.WeatherUI li {
   color: rgba(19, 49, 105, 0.7);
   font-size: 16px;
   line-height: 1.5;
   list-style: none;
 }
 
-.Weather .flex-container {
+.WeatherUI .flex-container {
   display: flex;
 }
 
-.Weather .weather-icon {
+.WeatherUI .weather-icon {
   margin-left: -5px;
 }
 
-.Weather .temperature {
+.WeatherUI .temperature {
   font-size: 62px;
   font-weight: bold;
   color: rgb(19, 49, 105);
   margin-left: -5px;
 }
 
-.Weather .unit {
+.WeatherUI .unit {
   margin-top: 18px;
   font-size: 20px;
   color: rgba(19, 49, 105, 0.6);
