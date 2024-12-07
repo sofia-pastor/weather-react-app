@@ -19,11 +19,22 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
-    const apiKey = "f81614abe2395d5dfecd45b9298041de";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const [image, setImage] = useState(null);
 
-    axios.get(apiUrl).then(displayWeather);
+  function displayCityImg(response) {
+    setImage(response.data.results[2].urls.regular);
+  }
+
+  function search() {
+    const weatherApiKey = "f81614abe2395d5dfecd45b9298041de";
+    let weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`;
+
+    axios.get(weatherApiUrl).then(displayWeather);
+
+    const imgApiKey = "MWykxzB0Qh71p7qxFsQcD8VqEJVRZGezR14417o4RPM";
+    const imgApiUrl = `https://api.unsplash.com/search/photos?query=${city}&client_id=${imgApiKey}`;
+
+    axios.get(imgApiUrl).then(displayCityImg);
   }
 
   function handleSubmit(event) {
@@ -35,9 +46,17 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  let backgroundStyle = {};
+
+  if (image) {
+    backgroundStyle = {
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${image})`,
+    };
+  }
+
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather" style={backgroundStyle}>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-9">
@@ -58,7 +77,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherUI data={weatherData} />
+        <WeatherUI data={weatherData} image={image} />
       </div>
     );
   } else {
