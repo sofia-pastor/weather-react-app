@@ -1,22 +1,30 @@
 .App {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 30px auto;
-
   background-color: rgb(209, 159, 160);
+  padding: 30px;
 }
 
 .App footer {
+  max-width: 800px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
-  margin: 16px 0;
+  margin: 16px auto;
 }
 
 .App footer a {
-  color: rgb(45, 160, 180);
+  color: rgb(31, 161, 161);
+  text-decoration: none;
+  transition: all ease-in-out 150ms;
+}
+
+.App footer a:hover {
+  color: rgb(80, 115, 115);
+  text-decoration: underline;
 }
 
 .Weather {
-  max-width: 700px;
+  margin: 30px auto;
+  max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,46 +34,64 @@
 }
 
 .Weather form {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 20px;
 }
 
+.Weather .button {
+  background-color: rgb(209, 159, 160);
+  border: 1px solid rgba(138, 199, 199, 0.8);
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out 150ms;
+}
+
+.Weather .button:hover {
+  background-color: rgb(199, 138, 139);
+  color: white;
+}
+
 .WeatherUI h1 {
-  color: rgb(19, 49, 105);
+  color: rgb(209, 159, 160);
+  text-align: center;
   font-size: 38px;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 700;
+  margin: 32px 0 0;
+}
+
+.WeatherUI .time {
+  color: rgba(138, 199, 199, 0.8);
+  text-align: center;
+  font-size: 16px;
+  margin: 0 0 25px;
 }
 
 .WeatherUI ul {
-  margin: 0 0 10px 0;
+  margin: 10px 0 30px 0;
   padding: 0;
 }
 
 .WeatherUI li {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(138, 199, 199, 0.8);
   font-size: 16px;
   line-height: 1.5;
   list-style: none;
 }
 
-.WeatherUI .flex-container {
-  display: flex;
-}
-
 .WeatherUI .weather-icon {
-  margin-left: -5px;
+  margin-left: -15px;
+  margin-top: -4px;
 }
 
 .WeatherUI .temperature {
   font-size: 62px;
   font-weight: bold;
-  color: rgb(19, 49, 105);
+  color: rgb(209, 159, 160);
   margin-left: -5px;
 }
 
 .WeatherUI .unit {
   margin-top: 18px;
   font-size: 20px;
-  color: rgba(19, 49, 105, 0.6);
+  color: rgba(209, 159, 160, 0.6);
 }

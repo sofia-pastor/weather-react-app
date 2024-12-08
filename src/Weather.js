@@ -50,7 +50,7 @@ export default function Weather(props) {
 
   if (image) {
     backgroundStyle = {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${image})`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${image})`,
     };
   }
 
@@ -72,7 +72,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn w-100 button"
               />
             </div>
           </div>
