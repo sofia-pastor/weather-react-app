@@ -95,3 +95,31 @@
   font-size: 20px;
   color: rgba(209, 159, 160, 0.6);
 }
+
+@media (max-width: 580px) {
+  .Weather .button {
+    margin: 10px 0 0;
+  }
+
+  .WeatherUI .time {
+    margin-bottom: 35px;
+  }
+
+  .WeatherUI .temperature {
+    font-size: 54px;
+    margin: 0 0 0 -10px;
+  }
+
+  .WeatherUI .weather-icon {
+    margin: -10px 0 0 -20px;
+  }
+
+  .WeatherUI .unit {
+    margin: 10px 0 0 2px;
+  }
+
+  .WeatherUI ul {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
