@@ -1,5 +1,6 @@
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherUI(props) {
   return (
@@ -10,11 +11,11 @@ export default function WeatherUI(props) {
       </div>
       <div className="row align-items-center mb-3">
         <div className="col-sm-6 justify-content-center d-flex">
-          <div className="icon">
+          <div>
             <WeatherIcon code={props.data.icon} />
           </div>
-          <div className="temperature">{props.data.temperature}</div>
-          <div className="unit">°C</div>
+
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
         <div className="col-sm-6 d-flex justify-content-center">
           <ul className="">
