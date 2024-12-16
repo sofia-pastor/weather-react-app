@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+  color: white;
+}
+
+.forecast-day {
+  color: rgb(133, 164, 174);
+}
+
+.forecast-temperatures {
+  color: rgb(133, 164, 174);
+}
+
+.forecast-min {
+  opacity: 0.7;
+}

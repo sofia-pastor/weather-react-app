@@ -12,7 +12,7 @@ export default function WeatherUI(props) {
       <div className="row align-items-center mb-3">
         <div className="col-sm-6 justify-content-center d-flex">
           <div>
-            <WeatherIcon code={props.data.icon} />
+            <WeatherIcon code={props.data.icon} size={64} />
           </div>
 
           <WeatherTemperature celsius={props.data.temperature} />

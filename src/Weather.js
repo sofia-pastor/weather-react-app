@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import WeatherUI from "./WeatherUI";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -51,7 +52,7 @@ export default function Weather(props) {
 
   if (image) {
     backgroundStyle = {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${image})`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${image})`,
     };
   }
 
@@ -79,6 +80,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherUI data={weatherData} image={image} />
+        <WeatherForecast />
       </div>
     );
   } else {
