@@ -20,7 +20,6 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
     });
   }
-
   const [image, setImage] = useState(null);
 
   function displayCityImg(response) {
@@ -80,7 +79,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherUI data={weatherData} image={image} />
-        <WeatherForecast />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
